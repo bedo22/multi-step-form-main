@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32-DQjEQYWa.png">
   <title>Multi-step form</title>
-  <script type="module" crossorigin src="./assets/index-DM4MrnZN.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-D9vwF8U1.css">
+  <script type="module" crossorigin src="./assets/index-BclH2-CH.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BcY7Ahv7.css">
 </head>
 <body>
-  <main class="card">
+  <main>
+    <div class="card">
     <aside class="sidebar">
       <div class="sidebar-bg"></div>
       <ol class="steps">
@@ -47,7 +48,7 @@
     <section class="content">
       <!-- Step 1 -->
       <div class="step-panel" data-panel="1">
-        <h1 class="panel-title">Personal info</h1>
+        <h2 class="panel-title">Personal info</h2>
         <p class="panel-desc">Please provide your name, email address, and phone number.</p>
         <form id="step1-form" class="form" novalidate>
           <div class="field">
@@ -80,11 +81,11 @@
 
       <!-- Step 2 -->
       <div class="step-panel" data-panel="2">
-        <h1 class="panel-title">Select your plan</h1>
+        <h2 class="panel-title">Select your plan</h2>
         <p class="panel-desc">You have the option of monthly or yearly billing.</p>
         <div class="plans" id="plans">
           <div class="plan-card" data-plan="arcade">
-            <div class="plan-icon plan-icon--arcade"></div>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%23FFAF7E'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M24.995%2018.005h-3.998v5.998h-2v-5.998H15a1%201%200%200%200-1%201V29a1%201%200%200%200%201%201h9.995a1%201%200%200%200%201-1v-9.995a1%201%200%200%200-1-1Zm-5.997%208.996h-2v-1.999h2v2Zm2-11.175a2.999%202.999%200%201%200-2%200v2.18h2v-2.18Z'/%3e%3c/g%3e%3c/svg%3e" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Arcade</span>
               <span class="plan-price" data-monthly="$9/mo" data-yearly="$90/yr">$9/mo</span>
@@ -92,7 +93,7 @@
             </div>
           </div>
           <div class="plan-card" data-plan="advanced">
-            <div class="plan-icon plan-icon--advanced"></div>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%23F9818E'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M25.057%2015H14.944C12.212%2015%2010%2017.03%2010%2019.885c0%202.857%202.212%204.936%204.944%204.936h10.113c2.733%200%204.943-2.08%204.943-4.936S27.79%2015%2025.057%2015ZM17.5%2020.388c0%20.12-.108.237-.234.237h-1.552v1.569c0%20.126-.138.217-.259.217H14.5c-.118%200-.213-.086-.213-.203v-1.583h-1.569c-.126%200-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12%200%20.236.108.236.234v1.551h1.555c.125%200%20.231.083.231.204v.988Zm5.347.393a.862.862%200%200%201-.869-.855c0-.472.39-.856.869-.856.481%200%20.87.384.87.856%200%20.471-.389.855-.87.855Zm1.9%201.866a.86.86%200%200%201-.87-.852.86.86%200%200%201%20.87-.855c.48%200%20.87.38.87.855a.86.86%200%200%201-.87.852Zm0-3.736a.862.862%200%200%201-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862%200%200%201-.87.854Zm1.899%201.87a.862.862%200%200%201-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862%200%200%201-.868.855Z'/%3e%3c/g%3e%3c/svg%3e" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Advanced</span>
               <span class="plan-price" data-monthly="$12/mo" data-yearly="$120/yr">$12/mo</span>
@@ -100,7 +101,7 @@
             </div>
           </div>
           <div class="plan-card" data-plan="pro">
-            <div class="plan-icon plan-icon--pro"></div>
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%23483EFF'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M26.666%2013H13.334A3.333%203.333%200%200%200%2010%2016.333v7.193a3.447%203.447%200%200%200%202.14%203.24c1.238.5%202.656.182%203.56-.8L18.52%2023h2.96l2.82%202.966a3.2%203.2%200%200%200%203.56.8%203.447%203.447%200%200%200%202.14-3.24v-7.193A3.333%203.333%200%200%200%2026.666%2013Zm-9.333%206H16v1.333a.667.667%200%200%201-1.333%200V19h-1.333a.667.667%200%200%201%200-1.334h1.333v-1.333a.667.667%200%201%201%201.333%200v1.333h1.333a.667.667%200%201%201%200%201.334Zm7.333%202a2.667%202.667%200%201%201%200-5.333%202.667%202.667%200%200%201%200%205.333ZM26%2018.333a1.333%201.333%200%201%201-2.667%200%201.333%201.333%200%200%201%202.667%200Z'/%3e%3c/g%3e%3c/svg%3e" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Pro</span>
               <span class="plan-price" data-monthly="$15/mo" data-yearly="$150/yr">$15/mo</span>
@@ -123,7 +124,7 @@
 
       <!-- Step 3 -->
       <div class="step-panel" data-panel="3">
-        <h1 class="panel-title">Pick add-ons</h1>
+        <h2 class="panel-title">Pick add-ons</h2>
         <p class="panel-desc">Add-ons help enhance your gaming experience.</p>
         <div class="addons" id="addons">
           <label class="addon-row" data-addon="online">
@@ -162,7 +163,7 @@
 
       <!-- Step 4 -->
       <div class="step-panel" data-panel="4">
-        <h1 class="panel-title">Finishing up</h1>
+        <h2 class="panel-title">Finishing up</h2>
         <p class="panel-desc">Double-check everything looks OK before confirming.</p>
         <div class="summary" id="summary">
           <div class="summary-plan">
@@ -189,11 +190,13 @@
       <div class="step-panel step-panel--centered" data-panel="5">
         <div class="thank-you">
           <div class="thank-you-icon"></div>
-          <h1 class="panel-title">Thank you!</h1>
+          <h2 class="panel-title">Thank you!</h2>
           <p class="panel-desc">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+          <button class="btn btn-ghost" id="start-over">Start Over</button>
         </div>
       </div>
     </section>
+    </div>
   </main>
 
 </body>
