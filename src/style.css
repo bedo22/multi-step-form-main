@@ -315,20 +315,7 @@ body {
 .plan-icon {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  margin-bottom: 40px;
-}
-
-.plan-icon--arcade {
-  background: #FFAF7E;
-}
-
-.plan-icon--advanced {
-  background: #F9818E;
-}
-
-.plan-icon--pro {
-  background: #483EFF;
+  flex-shrink: 0;
 }
 
 .plan-info {
@@ -659,11 +646,6 @@ body {
     align-items: center;
     gap: 16px;
     padding: 16px;
-  }
-
-  .plan-icon {
-    margin-bottom: 0;
-    flex-shrink: 0;
   }
 
   .controls {

@@ -2,6 +2,8 @@
 
 ![Preview](./preview.jpg)
 
+**Live demo:** [bedo22.github.io/multi-step-form-main](https://bedo22.github.io/multi-step-form-main/)
+
 A responsive subscription signup flow for the gaming platform Lorem Gaming. Users enter personal info, pick a plan and add-ons, review their summary, and confirm.
 
 Built as a practice project for e2e testing with Playwright — no framework overhead, just vanilla JS.

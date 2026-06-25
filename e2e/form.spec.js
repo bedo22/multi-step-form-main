@@ -29,7 +29,7 @@ test('full happy path — fill, select plan+addons, confirm, see thank you', asy
   await page.click('#confirm-btn')
 
   await expect(page.locator('[data-panel="5"]')).toBeVisible()
-  await expect(page.locator('.thank-you h1')).toHaveText('Thank you!')
+  await expect(page.locator('.thank-you h2')).toHaveText('Thank you!')
 })
 
 test('validation — empty fields show errors and block progression', async ({ page }) => {

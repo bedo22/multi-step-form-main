@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-  <main class="card">
+  <main>
+    <div class="card">
     <aside class="sidebar">
       <div class="sidebar-bg"></div>
       <ol class="steps">
@@ -46,7 +47,7 @@
     <section class="content">
       <!-- Step 1 -->
       <div class="step-panel" data-panel="1">
-        <h1 class="panel-title">Personal info</h1>
+        <h2 class="panel-title">Personal info</h2>
         <p class="panel-desc">Please provide your name, email address, and phone number.</p>
         <form id="step1-form" class="form" novalidate>
           <div class="field">
@@ -79,11 +80,11 @@
 
       <!-- Step 2 -->
       <div class="step-panel" data-panel="2">
-        <h1 class="panel-title">Select your plan</h1>
+        <h2 class="panel-title">Select your plan</h2>
         <p class="panel-desc">You have the option of monthly or yearly billing.</p>
         <div class="plans" id="plans">
           <div class="plan-card" data-plan="arcade">
-            <div class="plan-icon plan-icon--arcade"></div>
+            <img src="./assets/images/icon-arcade.svg" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Arcade</span>
               <span class="plan-price" data-monthly="$9/mo" data-yearly="$90/yr">$9/mo</span>
@@ -91,7 +92,7 @@
             </div>
           </div>
           <div class="plan-card" data-plan="advanced">
-            <div class="plan-icon plan-icon--advanced"></div>
+            <img src="./assets/images/icon-advanced.svg" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Advanced</span>
               <span class="plan-price" data-monthly="$12/mo" data-yearly="$120/yr">$12/mo</span>
@@ -99,7 +100,7 @@
             </div>
           </div>
           <div class="plan-card" data-plan="pro">
-            <div class="plan-icon plan-icon--pro"></div>
+            <img src="./assets/images/icon-pro.svg" alt="" width="40" height="40" class="plan-icon">
             <div class="plan-info">
               <span class="plan-name">Pro</span>
               <span class="plan-price" data-monthly="$15/mo" data-yearly="$150/yr">$15/mo</span>
@@ -122,7 +123,7 @@
 
       <!-- Step 3 -->
       <div class="step-panel" data-panel="3">
-        <h1 class="panel-title">Pick add-ons</h1>
+        <h2 class="panel-title">Pick add-ons</h2>
         <p class="panel-desc">Add-ons help enhance your gaming experience.</p>
         <div class="addons" id="addons">
           <label class="addon-row" data-addon="online">
@@ -161,7 +162,7 @@
 
       <!-- Step 4 -->
       <div class="step-panel" data-panel="4">
-        <h1 class="panel-title">Finishing up</h1>
+        <h2 class="panel-title">Finishing up</h2>
         <p class="panel-desc">Double-check everything looks OK before confirming.</p>
         <div class="summary" id="summary">
           <div class="summary-plan">
@@ -188,11 +189,13 @@
       <div class="step-panel step-panel--centered" data-panel="5">
         <div class="thank-you">
           <div class="thank-you-icon"></div>
-          <h1 class="panel-title">Thank you!</h1>
+          <h2 class="panel-title">Thank you!</h2>
           <p class="panel-desc">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+          <button class="btn btn-ghost" id="start-over">Start Over</button>
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <script type="module" src="./src/app.js"></script>

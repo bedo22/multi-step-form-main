@@ -150,6 +150,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Billing toggle
   $('#billing-toggle').addEventListener('click', toggleBilling)
 
+  // Click toggle labels to switch directly
+  $$('.toggle-label').forEach((label, i) => {
+    label.addEventListener('click', () => {
+      if ((i === 0 && state.billing === 'monthly') || (i === 1 && state.billing === 'yearly')) return
+      toggleBilling()
+    })
+  })
+
   // Add-on checkboxes
   $$('.addon-checkbox').forEach((cb) => {
     cb.addEventListener('change', () => toggleAddon(cb.closest('.addon-row').dataset.addon, cb.checked))
@@ -164,8 +172,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Confirm button
   $('#confirm-btn').addEventListener('click', () => goToStep(5))
 
-  // Allow Enter to trigger Next Step
-  document.addEventListener('keydown', (e) => {
+  // Start Over
+  $('#start-over').addEventListener('click', () => {
+    state.plan = 'arcade'
+    state.billing = 'monthly'
+    state.addons = { online: false, storage: false, profile: false }
+    state.name = ''; state.email = ''; state.phone = ''
+    $$('.plan-card').forEach((c) => c.classList.remove('selected'))
+    $$('.plan-card[data-plan="arcade"]').classList.add('selected')
+    $$('.addon-row').forEach((r) => r.classList.remove('checked'))
+    $$('.addon-checkbox').forEach((cb) => cb.checked = false)
+    $$('.field input').forEach((inp) => inp.value = '')
+    const bt = document.querySelector('.billing-toggle')
+    bt.classList.remove('yearly')
+    bt.querySelectorAll('.toggle-label').forEach((l, i) => l.classList.toggle('active', i === 0))
+    goToStep(1)
+  })
+
+  // Allow Enter to trigger Next Step — scoped to form card
+  $('.card').addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && state.step <= 4 && state.step >= 1) {
       const btn = $(`.step-panel.active .next-step`)
       if (btn) btn.click()
